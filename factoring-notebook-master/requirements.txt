@@ -1,0 +1,9 @@
+dwave-ocean-sdk>=3.3.0
+
+jupyter
+jupyter_contrib_nbextensions
+autopep8
+bokeh<3
+
+nbformat
+nbconvert==5.6.1 
