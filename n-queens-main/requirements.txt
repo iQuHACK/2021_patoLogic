@@ -1,2 +1,0 @@
-dwave-ocean-sdk>=2.1.1
-matplotlib
