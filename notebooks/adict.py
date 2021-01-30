@@ -7,6 +7,10 @@ class adict(defaultdict):
         for k in self.keys() | other.keys():
             new[k] = self[k] + other[k]
         return new
+    
+    def __iadd_(self, other):
+        for k, v in other.items():
+            self[k] += v
 
     def __sub__(self, other):
         new = adict(int)
