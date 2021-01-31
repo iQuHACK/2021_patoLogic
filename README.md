@@ -19,7 +19,9 @@ _Organizer's note:_ this project won the **creativity award** in iQuHACK 2020.
 
 ---
 
-# Quack Battle: Creating and Solving Star Battle Games with Quantum Annealing 
+![logo](logo.png)
+
+# Starbattle Quacklactica: Creating and Solving Star Battle Games with Quantum Annealing 
 
 Diogo Cruz, Duarte Magano, Óscar Amaro, Sagar Pratapsi
 
@@ -74,8 +76,6 @@ The classical simulator uses a previously-implemented approach [3] to find a sol
 ## Introduction
 
 The development of quantum computing has offered revolutionary scope for many traditional areas. Game theory, a theory to study decision making in conflict situations, has been transferred into quantum version[1]. The quantum game theory is different from the traditional one in three different ways[2]:
-
-
 
 1. The initial status is entangled
 2. The initial state is superposed
