@@ -10,7 +10,7 @@ Diogo Cruz, Duarte Magano, Óscar Amaro, Sagar Pratapsi
 
 Quantum annealing is a computing paradigm that has the ambitious goal of efficiently solving large-scale combinatorial optimization problems of practical importance [1,2].
 
-In this work, we present **both a generator and a solver of Star Battle games, using a quantum annealing device from D-Wave**. A presentation of the method can be seen ![here](presentation.pdf). A Jypyter Notebook with the various methods can be seen ![here](showcase.ipynb)
+In this work, we present **both a generator and a solver of Star Battle games, using a quantum annealing device from D-Wave**. A presentation of the method can be seen ![here](presentation.pdf). A Jypyter Notebook with the various methods can be seen ![here](battle_star/showcase.ipynb)
 
 ## Introduction
 
