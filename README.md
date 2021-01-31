@@ -15,11 +15,7 @@ Feel free to contact the staff with questions over our [event's slack](https://i
 Good luck!
 
 
-_Organizer's note:_ this project won the **creativity award** in iQuHACK 2020.
-
----
-
-![logo](logo.png)
+![logo](logo.jpg)
 
 # Starbattle Quacklactica: Creating and Solving Star Battle Games with Quantum Annealing 
 
