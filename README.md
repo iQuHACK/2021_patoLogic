@@ -10,11 +10,11 @@ Diogo Cruz, Duarte Magano, Óscar Amaro, Sagar Pratapsi
 
 Quantum annealing is a computing paradigm that has the ambitious goal of efficiently solving large-scale combinatorial optimization problems of practical importance [1,2].
 
-In this work, we present **both a generator and a solver of Star Battle games, using a quantum annealing device from D-Wave**. A presentation of the method can be seen ![here](presentation.pdf).
+In this work, we present **both a generator and a solver of Star Battle games, using a quantum annealing device from D-Wave**. A presentation of the method can be seen ![here](presentation.pdf). A Jypyter Notebook with the various methods can be seen ![here](showcase.ipynb)
 
 ## Introduction
 
-Quantum annealing has been designed to solve classical combinatorial optimization problems, with applications ranging from computer science problems, classification, quantum chemistry, machine learning, search engine ranking to protein folding. Such optimization problems require the minimization of acost function, a task that can be rephrased as finding the ground state of a classicalIsing Hamiltonian ![equation](https://latex.codecogs.com/png.latex?H_0). Many problems of practical importance, however, have costfunctions with a large number of local minima, corresponding to Ising Hamiltonians that are reminiscent of classical spin glasses. These characteristics make it extremely difficult for classical algorithms to find the global minimum.
+Quantum annealing has been designed to solve classical combinatorial optimization problems, with applications ranging from computer science problems, classification, quantum chemistry, machine learning, search engine ranking to protein folding. Such optimization problems require the minimization of a cost function, a task that can be rephrased as finding the ground state of a classical Ising Hamiltonian. Many problems of practical importance, however, have costfunctions with a large number of local minima, corresponding to Ising Hamiltonians that are reminiscent of classical spin glasses. These characteristics make it extremely difficult for classical algorithms to find the global minimum.
 
 ## How to Play
 
@@ -27,7 +27,7 @@ Fill cells with ~~stars~~ ducks so that:
 
 How can choose the grid size and the number of ducks per row/column/region.
 
-![start](start.png)
+![photo2](photo2.png)
 
 ### Menu options:
 
@@ -35,7 +35,7 @@ You can choose to generate a new grid using a classical method, a quantum-inspir
 
 As is traditional, you can exit the game, once you are tired of ducks.
 
-![menu](menu.png)
+![photo1](photo1.png)
 
 #### Generating games
 
