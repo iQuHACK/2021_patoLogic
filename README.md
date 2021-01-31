@@ -27,13 +27,16 @@ Quantum annealing is a computing paradigm that has the ambitious goal of efficie
 
 ## Introduction
 
-Quantum annealing has been designed to solve classical combinatorial optimization problems, with applications ranging from computer science problems, classification, quantum chemistry, machine learning, search engine ranking to protein folding. Such optimization problems require the minimization of acost function, a task that can be rephrased as finding the ground state of a classicalIsing Hamiltonian ![equation](https://latex.codecogs.com/png.latex?H_0). Many problems of practical importance, however, have costfunctions with a large number of local minima, corresponding to Ising Hamiltoniansthat are reminiscent of classical spin glasses. These characteristics makeit extremely difficult for classical algorithms to find the global minimum.
+Quantum annealing has been designed to solve classical combinatorial optimization problems, with applications ranging from computer science problems, classification, quantum chemistry, machine learning, search engine ranking to protein folding. Such optimization problems require the minimization of acost function, a task that can be rephrased as finding the ground state of a classicalIsing Hamiltonian ![equation](https://latex.codecogs.com/png.latex?H_0). Many problems of practical importance, however, have costfunctions with a large number of local minima, corresponding to Ising Hamiltonians that are reminiscent of classical spin glasses. These characteristics make it extremely difficult for classical algorithms to find the global minimum.
 
 ## Methods
 
 ## How to Play
 
-Fill some cells with stars so that each row, column, and bold region contains the indicated number of stars. Stars cannot be placed in adjacent cells that share an edge or corner.
+Fill cells with stars so that:
+
+* each row, column, and bold region contains the indicated number of stars.
+* stars are not placed in adjacent cells that share an edge or corner.
 
 In the Menu options, you can choose to generate a new grid using a classical method, a quantum-inspired method, or using a real quantum device from D-Wave. You can also look at the solution given by a classical method, a quantum-inspired method, or using a real quantum device from D-Wave.
 
@@ -55,32 +58,11 @@ The classical simulator uses a previously-implemented approach [3] to find a sol
 
 ## References
 
-
-
 [1]Lucas, A. "Ising formulations of many NP problems." Front. Physics 2, (2014).
 
 [2]Hauke, P., Katzgraber, H. G., Lechner, W., Nishimori, H. & Oliver, W. D. "Perspectives of quantum annealing: Methods and implementations." Rep. Prog. Phys. 83, 054401 (2020).
 
 [3][Yadkee]. (2018, February 16). [2018-02-16] Challenge #351 [Hard] Star Battle solver [Online forum post]. Retrieved from https://www.reddit.com/r/dailyprogrammer/comments/7xyi2w/20180216_challenge_351_hard_star_battle_solver/
-
-
-
-[1]Piotrowski, Edward W., and Jan Sładkowski. "An invitation to quantum game theory." _International Journal of Theoretical Physics_ 42.5 (2003): 1089-1099.
-
-
-
-## Introduction
-
-The development of quantum computing has offered revolutionary scope for many traditional areas. Game theory, a theory to study decision making in conflict situations, has been transferred into quantum version[1]. The quantum game theory is different from the traditional one in three different ways[2]:
-
-1. The initial status is entangled
-2. The initial state is superposed
-3. Player strategy is quantum
-
-These features indicate that in a quantum scenario, the definition of win and lose in a game changes fundamentally as a function of the qubit phase and rotation and the collapse of that function upon measurement.
-
-In this project, we propose a quantum game, which is a modified version of the multi-player PacMan game. The game is a validation of quantum game theory and test quantum win strategies.
-
 
 <!-- ## ToDo:
 ### Things we would wanna fix/implement but didn't have enough time to do
