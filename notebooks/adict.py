@@ -20,7 +20,7 @@ class adict(defaultdict):
 
     def __mul__(self, other):
         new = adict(int)
-        if isinstance(other, int):
+        if isinstance(other, int) or isinstance(other, float):
             for k, v in self.items():
                 new[k] = v * other
             return new
