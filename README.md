@@ -14,7 +14,6 @@ Feel free to contact the staff with questions over our [event's slack](https://i
 
 Good luck!
 
-
 ![logo](logo.jpg)
 
 # Starbattle Quacklactica: Creating and Solving Star Battle Games with Quantum Annealing 
@@ -33,12 +32,20 @@ Quantum annealing has been designed to solve classical combinatorial optimizatio
 
 ## How to Play
 
-Fill cells with stars so that:
+Fill cells with ~~stars~~ ducks so that:
 
-* each row, column, and bold region contains the indicated number of stars.
-* stars are not placed in adjacent cells that share an edge or corner.
+* each row, column, and bold region contains the indicated number of ducks.
+* ducks are not placed in adjacent cells that share an edge or corner.
 
-In the Menu options, you can choose to generate a new grid using a classical method, a quantum-inspired method, or using a real quantum device from D-Wave. You can also look at the solution given by a classical method, a quantum-inspired method, or using a real quantum device from D-Wave.
+### Starting options:
+
+How can choose the grid size and the number of ducks per row/column/region.
+
+### Menu options:
+
+You can choose to generate a new grid using a classical method, a quantum-inspired method, or using a real quantum device from D-Wave. You can also look at the solution given by a classical method, a quantum-inspired method, or using a real quantum device from D-Wave.
+
+As is traditional, you can exit the game, once you are tired of ducks.
 
 ### Generating games
 
