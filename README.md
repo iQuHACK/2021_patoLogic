@@ -1,10 +1,3 @@
-Having a README in your team's repository facilitates judging. A good README contains:
-* a clear title for your project,
-* a short abstract,
-* the motivation/goals for your project,
-* a description of the work you did, and
-* proposals for future work.
-
 ![logo](logo.jpg)
 
 # Starbattle Quacklactica
