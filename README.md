@@ -7,7 +7,9 @@ Having a README in your team's repository facilitates judging. A good README con
 
 ![logo](logo.jpg)
 
-# Starbattle Quacklactica: Creating and Solving Star Battle Games with Quantum Annealing 
+# Starbattle Quacklactica
+
+#### *Creating and Solving Star Battle Games with Quantum Annealing* 
 
 Diogo Cruz, Duarte Magano, Óscar Amaro, Sagar Pratapsi
 
