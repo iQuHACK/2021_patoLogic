@@ -27,7 +27,7 @@ Fill cells with ~~stars~~ ducks so that:
 
 How can choose the grid size and the number of ducks per row/column/region.
 
-![photo2](photo2.png)
+![photo2](photo2.jpg)
 
 ### Menu options:
 
@@ -35,7 +35,9 @@ You can choose to generate a new grid using a classical method, a quantum-inspir
 
 As is traditional, you can exit the game, once you are tired of ducks.
 
-![photo1](photo1.png)
+![photo1](photo1.jpg)
+
+## What we are doing in the background
 
 #### Generating games
 
