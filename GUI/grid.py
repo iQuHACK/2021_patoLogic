@@ -3,6 +3,7 @@ import sys
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
+import tkinter.font as tkFont
 from PIL import Image, ImageTk
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,7 +13,8 @@ MAX_N, DEFAULT_N = 26, 10
 # The "default" colour for an unfilled grid cell
 UNFILLED = '#fff'
 
-guess_stars = np.array([[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+# user guess
+guess = np.array([[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
        [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
        [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
        [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
@@ -26,12 +28,21 @@ guess_stars = np.array([[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
 class GridApp:
     """The main class representing a grid of coloured cells."""
 
-    # The colour palette
-    colours = (UNFILLED, 'red', 'green')
-    ncolours = len(colours)
-
     def __init__(self, master, n, width=600, height=600, pad=5):
         """Initialize a grid and the Tk Frame on which it is rendered."""
+
+        menu = Menu(master)
+        master.config(menu=menu)
+        fileMenu = Menu(menu)
+        fileMenu.add_command(label="Generate Classic")
+        fileMenu.add_command(label="Generate DWave")
+        fileMenu.add_command(label="Solve Classic")
+        fileMenu.add_command(label="Solve DWave")
+        fileMenu.add_command(label="Exit", command=self.exitProgram)
+        menu.add_cascade(label="Options", menu=fileMenu)
+        editMenu = Menu(menu)
+        editMenu.add_command(label="Clear", command=self.clearAll)
+        menu.add_cascade(label="Edit", menu=editMenu)
 
         # Number of cells in each dimension.
         self.n = n
@@ -62,37 +73,22 @@ class GridApp:
         img.image = render
         img.place(x=0, y=0)
 
-
         # Add labels
         self.text_lab = []
         dx = 600/n
-        print(dx)
         for iy in range(0,n):
             for ix in range(0,n):
-                if guess_stars[iy][ix] == 1:
+                if guess[iy][ix] == 0:
+
+                    #image1 = PhotoImage(file="duck2.png")
+                    text = Label(self.w, text="")
+                    #label1 = tkinter.Label(root, image=image1)
+                    text.pack()
+                elif guess[iy][ix] == 1:
                     text = Label(self.w, text="*")
-                else:
+                elif guess[iy][ix] == 2:
                     text = Label(self.w, text=".")
                 text.place(x=ix*dx+dx/2,y=iy*dx+dx/2)
-
-                """
-                duck = Image.open('duck_icon.png')
-                duck = duck.resize((int(0.5*600/10), int(0.5*600/10)), Image.ANTIALIAS)
-                my_img = ImageTk.PhotoImage(duck)
-                text = Label(self.w, image = my_img)
-                text.place(x=ix*dx+dx//4,y=iy*dx+dx//4)
-                #text.pack()
-                """
-
-                #duck=PhotoImage(file='duck_icon.png')
-                #text = Label(self.w,image=duck,bg='grey').pack()
-                
-                #img = Image.open('duck_icon.png')
-                #self.tkimage = ImageTk.PhotoImage(img)
-                #text = Label(self,image = self.tkimage).place(x=0, y=0, relwidth=1, relheight=1)
-
-                #text = self.w.create_text((ix*dx, iy*dx), text="*")
-                #rect = self.palette_canvas.create_rectangle(x, y, x+p_width, y+p_height, fill=self.colours[i])
                 self.text_lab.append(text)
 
 
@@ -108,8 +104,16 @@ class GridApp:
             yc = y - iy*(ysize + pad) - pad
             if ix < n and iy < n and 0 < xc < xsize and 0 < yc < ysize:
                 i = iy*n+ix
-                print(i)
-                self.text_lab[i].config(text='')
+                if guess[iy][ix]==0:
+                    guess[iy][ix]=1
+                    self.text_lab[i].config(text='*')
+                elif guess[iy][ix]==1:
+                    guess[iy][ix]=2
+                    self.text_lab[i].config(text='.')
+                elif guess[iy][ix]==2:
+                    guess[iy][ix]=0
+                    self.text_lab[i].config(text='')
+
         # Bind the grid click callback function to the left mouse button
         # press event on the grid canvas.
         img.bind('<ButtonPress-1>', w_click_callback)
@@ -120,6 +124,17 @@ class GridApp:
         # the vertical axis is labelled 1, 2, 3, ... bottom-to-top.
         iy, ix = divmod(i, self.n)
         return '{}{}'.format(chr(ix+65), self.n-iy)
+
+    def clearAll(self):
+        for iy in range(0,n):
+            for ix in range(0,n):
+                i = iy*n+ix
+                guess[iy][ix] = 0
+                self.text_lab[i].config(text='')
+
+    # leave patoLogic
+    def exitProgram(self):
+        exit()
 
 # Get the grid size from the command line, if provided
 try:
@@ -138,6 +153,6 @@ root = Tk()
 root.title("patoLogic")     # Add a title
 grid = GridApp(root, n, 600, 600, 5)
 # Don't allow resizing in the x or y direction
-#root.resizable(0, 0)
+root.resizable(0,0)
 
 root.mainloop()
