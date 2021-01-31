@@ -7,4 +7,4 @@ Annealer options:
 
 from .generate_puzzle import generate_puzzle
 from .solve_puzzle import solve_puzzle
-from .plots import draw_puzzle
+from .plots import draw_puzzle_inline
