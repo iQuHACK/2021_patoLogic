@@ -23,17 +23,41 @@ _Organizer's note:_ this project won the **creativity award** in iQuHACK 2020.
 
 Diogo Cruz, Duarte Magano, Óscar Amaro, Sagar Pratapsi
 
+---
+
 Quantum annealing is a computing paradigm that has the ambitious goal of efficiently solving large-scale combinatorial optimization problems of practical importance [1,2]. In this work, we present both a generator and a solver of Star Battle games.
 
 ## Introduction
 
-Quantum annealing has been designed to solve classical combinatorial optimization problems, with applications ranging from computer science problems, classification, quantum chemistry, machine learning, search engine ranking to protein folding. Such optimization problems require the minimization of acost function, a task that can be rephrased as finding the ground state of a classicalIsing Hamiltonian H0. Many problems of practical importance, however, have costfunctions with a large number of local minima, corresponding to Ising Hamiltoniansthat are reminiscent of classical spin glasses. These characteristics makeit extremely difficult for classical algorithms to find the global minimum.
+Quantum annealing has been designed to solve classical combinatorial optimization problems, with applications ranging from computer science problems, classification, quantum chemistry, machine learning, search engine ranking to protein folding. Such optimization problems require the minimization of acost function, a task that can be rephrased as finding the ground state of a classicalIsing Hamiltonian ![equation](https://latex.codecogs.com/png.latex?H_0). Many problems of practical importance, however, have costfunctions with a large number of local minima, corresponding to Ising Hamiltoniansthat are reminiscent of classical spin glasses. These characteristics makeit extremely difficult for classical algorithms to find the global minimum.
 
-![equation](https://latex.codecogs.com/png.latex?H_0)
+## Methods
+
+### Generating games
+
+For the classical generator, the star positions and regions are random generated while taking into account some of the games rules. These games are generated until all the rules of the game are satisfied, thereby ensuring that the game grid is valid, and that there is a solution. As expected, this generator takes a long time to succeed, for bigger grids.
+
+The quantum generator first produces a game without regions, with a distribution of stars that satisfies the games rules, by implementing a Binary Quadratic Model in a D-Wave quantum device. A subsequent Binary Quadratic Model is used to draw the regions in the game, while ensuring that the games rules are satisfied.
+
+The quantum-inspired generator uses the same principles as the quantum one, but it is run on a quantum annealing simulator, and not a real quantum device.
+
+## Solving games
+
+The quantum solver uses a Binary Quadratic Model to search for a star distribution on the game's grid that satisfies all the games rules. It does so by running on a real D-Wave quantum device.
+
+The quantum-inspired solver uses the same principles as the quantum one, but it is run on a quantum annealing simulator, and not a real quantum device.
+
+The classical simulator uses a previously-implemented approach [3] to find a solution. It is present mainly as a debug tool.
+
+## How to play
+
+In the Menu options, you can choose to generate a new grid using a classical method, a quantum-inspired method, or using a real quantum device from D-Wave.
 
 [1]Lucas, A. "Ising formulations of many NP problems." Front. Physics 2, (2014).
 
 [2]Hauke, P., Katzgraber, H. G., Lechner, W., Nishimori, H. & Oliver, W. D. "Perspectives of quantum annealing: Methods and implementations." Rep. Prog. Phys. 83, 054401 (2020).
+
+[3][Yadkee]. (2018, February 16). [2018-02-16] Challenge #351 [Hard] Star Battle solver [Online forum post]. Retrieved from https://www.reddit.com/r/dailyprogrammer/comments/7xyi2w/20180216_challenge_351_hard_star_battle_solver/
 
 
 
