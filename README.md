@@ -48,7 +48,7 @@ The quantum generator first produces a game without regions, with a distribution
 
 The quantum-inspired generator uses the same principles as the quantum one, but it is run on a quantum annealing simulator, and not a real quantum device.
 
-## Solving games
+### Solving games
 
 The quantum solver uses a Binary Quadratic Model to search for a star distribution on the game's grid that satisfies all the games rules. It does so by running on a real D-Wave quantum device.
 
